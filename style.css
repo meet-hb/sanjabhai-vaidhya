@@ -62,7 +62,7 @@ body {
   height: 100%;
   font-size: 14px;
   color: #333333;
-  font-family: 'Muli', sans-serif;
+  font-family: cursive;
   vertical-align: baseline;
   line-height: 26px;
   font-weight: 400;
@@ -121,7 +121,7 @@ h5,
 h6 {
   margin: 0 0 26px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: cursive;
 }
 
 a {
@@ -269,6 +269,7 @@ ul {
 .mean-container .mean-nav {
   position: absolute;
   top: 100%;
+  width: 100%;
 }
 
 .text-left {
@@ -501,7 +502,7 @@ ul {
 }
 
 .header-middle-area .logo-area {
-  padding: 27px 0 0;
+  padding: 10px 0 0;
 }
 
 .header-middle-area .logo-area a {
@@ -1523,7 +1524,7 @@ ul {
   text-align: center;
   width: 100%;
   height: 100%;
-  background: rgba(211, 47, 47, 0.8);
+  background: rgba(0, 0, 0, 0.2);
   top: 0;
   transform: scale(0);
   transform-origin: 0 1 0;
@@ -2575,6 +2576,172 @@ ul {
 .inner-page-header .header-page-locator ul li a:hover {
   color: #000;
 }
+
+/* Teacher Start */
+.inner-page-header-teacher {
+  background: url(images/banner/3.jpg) no-repeat;
+  padding: 200px 0 113px 0;
+  background-position: center center;
+  background-size: cover;
+}
+
+.inner-page-header-teacher .header-page-title h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 36px;
+}
+
+.inner-page-header-teacher .header-page-locator ul {
+  text-align: right;
+}
+
+.inner-page-header-teacher .header-page-locator ul li {
+  display: inline-block;
+  color: #fff;
+}
+
+.inner-page-header-teacher .header-page-locator ul li a {
+  color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+
+.inner-page-header-teacher .header-page-locator ul li a:hover {
+  color: #000;
+}
+
+/* Teacher End */
+/* Notes Start */
+.inner-page-header-notes {
+  background: url(images/banner/4.jpg) no-repeat;
+  padding: 200px 0 113px 0;
+  background-position: center center;
+  background-size: cover;
+}
+
+.inner-page-header-notes .header-page-title h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 36px;
+}
+
+.inner-page-header-notes .header-page-locator ul {
+  text-align: right;
+}
+
+.inner-page-header-notes .header-page-locator ul li {
+  display: inline-block;
+  color: #fff;
+}
+
+.inner-page-header-notes .header-page-locator ul li a {
+  color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+
+.inner-page-header-notes .header-page-locator ul li a:hover {
+  color: #000;
+}
+
+/* Notes End */
+
+/* Travel Start */
+.inner-page-header-travel {
+  background: url(images/banner/5.jpg) no-repeat;
+  padding: 200px 0 113px 0;
+  background-position: center center;
+  background-size: cover;
+}
+
+.inner-page-header-travel .header-page-title h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 36px;
+}
+
+.inner-page-header-travel .header-page-locator ul {
+  text-align: right;
+}
+
+.inner-page-header-travel .header-page-locator ul li {
+  display: inline-block;
+  color: #fff;
+}
+
+.inner-page-header-travel .header-page-locator ul li a {
+  color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+
+.inner-page-header-travel .header-page-locator ul li a:hover {
+  color: #000;
+}
+/* Travel End */
+
+/* Glamour Start */
+.inner-page-header-glamour {
+  background: url(images/banner/6.jpg) no-repeat;
+  padding: 200px 0 113px 0;
+  background-position: center center;
+  background-size: cover;
+}
+
+.inner-page-header-glamour .header-page-title h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 36px;
+}
+
+.inner-page-header-glamour .header-page-locator ul {
+  text-align: right;
+}
+
+.inner-page-header-glamour .header-page-locator ul li {
+  display: inline-block;
+  color: #fff;
+}
+
+.inner-page-header-glamour .header-page-locator ul li a {
+  color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+
+.inner-page-header-glamour .header-page-locator ul li a:hover {
+  color: #000;
+}
+/* Glamour End */
+
+/* Celebrity Start */
+.inner-page-header-celebrity {
+  background: url(images/banner/7.jpg) no-repeat;
+  padding: 200px 0 113px 0;
+  background-position: center center;
+  background-size: cover;
+}
+
+.inner-page-header-celebrity .header-page-title h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 36px;
+}
+
+.inner-page-header-celebrity .header-page-locator ul {
+  text-align: right;
+}
+
+.inner-page-header-celebrity .header-page-locator ul li {
+  display: inline-block;
+  color: #fff;
+}
+
+.inner-page-header-celebrity .header-page-locator ul li a {
+  color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+
+.inner-page-header-celebrity .header-page-locator ul li a:hover {
+  color: #000;
+}
+/* Celebrity End */
 
 /* ------------------------------------
 15.About Team Start Here 
@@ -8875,4 +9042,174 @@ ul {
   background: #ffffff !important;
   color: #000;
   box-shadow: none;
+}
+
+.Note{
+  background-color: #000;
+  color: #fff;
+  /* padding: 10px; */
+  /* margin: 20px 0; */
+  border-radius: 50px;
+  outline: none;
+
+  /* border: none; */
+}
+.Note a{
+  color: #fff;
+  text-decoration: none;
+}
+.Note:hover{
+  background-color: #fff;
+  color: #000;
+  /* border: 1px solid #000; */
+  transition: all 0.5s ease-in-out;
+}
+.Note a:hover{
+  color: #000;
+  text-decoration: none;
+}
+.Minimalistic{
+  background-color: #000;
+  color: #fff;
+  /* padding: 10px;
+  margin: 20px 0; */
+  border-radius: 50px;
+  outline: none;
+  /* border: none; */
+}
+.Minimalistic:hover{
+  background-color: #fff;
+  color: #000;
+  /* border: 1px solid #000; */
+  transition: all 0.5s ease-in-out;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  /* padding: 10px 25px; */
+  font-family: cursive;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+/* 11 */
+.btn-11 {
+  border: none;
+  background: rgb(251,33,117);
+    background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
+    color: #fff;
+    overflow: hidden;
+    /* border-radius: 20px; */
+    /* gap: 10px; */
+}
+.btn-11:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 6s ease-in-out infinite;
+}
+.btn-11:hover{
+  opacity: .7;
+}
+.btn-11:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+/* 3 */
+.btn-3 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
 }

@@ -1,19 +1,4 @@
 @charset "utf-8";
-
-/**
-*
-* -------------------------------------------------
-*
-* Template : Shooter HTML5 Responsive Photography and Photo Contest Template 
-* Author : rs-theme
-* Author URI : http://www.rstheme.com/
-*
-* --------------------------------------------------
-*
-**/
-
-/* Extra Large Devices, Wide Screens */
-
 @media only screen and (max-width: 1600px) {
     .home-page-core-activities-area img {
         min-height: 489px;
@@ -37,18 +22,6 @@
     }    .home-page-core-activities-area {
         height: 489px;
     }
-    /*.slider-bottom-area .slider-bottom .total-business .owl-buttons .owl-prev,
-    .home-shop .single-shop-area .owl-buttons .owl-prev,
-    .client-logo-area .owl-buttons div.owl-prev,
-    .home-blog-area .blog-slider .owl-buttons div.owl-prev {
-        left: -2px;
-    }*/
-    /*.slider-bottom-area .slider-bottom .total-business .owl-buttons .owl-next,
-    .home-shop .single-shop-area .owl-buttons .owl-next,
-    .client-logo-area .owl-buttons div.owl-next,
-    .home-blog-area .blog-slider .owl-buttons div.owl-next {
-        right: -2px;
-    }*/
 }
 
 

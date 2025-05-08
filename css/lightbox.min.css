@@ -88,7 +88,7 @@ body.lb-disable-scrolling {
     cursor: pointer;
     display: block;
 }
-.lb-nav a.lb-prev {
+.lb-nav a.lb-prev {                                                                     
     width: 34%;
     left: 0;
     float: left;

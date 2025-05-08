@@ -2192,7 +2192,7 @@ ul {
 }
 
 .footer-top-area .footer-two ul li a:hover {
-  color: #000;
+  color: #fff;
 }
 
 .footer-top-area .footer-two ul li i {
@@ -2391,6 +2391,7 @@ ul {
 
 .portfolio-one-area .single-portfolio .portfolio-image img {
   width: 100%;
+  border-radius: 30px;
 }
 
 .portfolio-one-area .single-portfolio .overley {
@@ -2408,6 +2409,7 @@ ul {
   opacity: 0;
   transform: scale(0);
   background: rgba(144, 144, 144, 0.64);
+  border-radius: 30px;
 }
 
 .portfolio-one-area .single-portfolio .overley .portfolio-details {
@@ -5967,7 +5969,7 @@ ul {
 }
 
 .home-page-core-activities-area .home-activities-area .single-activities:hover .media .media-body h4.media-heading a {
-  color: #000;
+  color: #fff;
 }
 
 .home-page-core-activities-area .home-activities-area .single-activities .media .pull-left {

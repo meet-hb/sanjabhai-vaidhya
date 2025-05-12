@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tag -->
+    <meta charset="utf-8">
+    <title>Sanjay Vaidhya | Intro</title>
+    <meta name="description" content="">
+    <!-- responsive tag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="https://rstheme.com/">
+    <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" type="text/css" href="css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <!-- magnific popup css -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <!-- nivo slider CSS -->
+    <link rel="stylesheet" type="text/css" href="inc/custom-slider/css/nivo-slider.css">
+    <link rel="stylesheet" type="text/css" href="inc/custom-slider/css/preview.css">
+    <!-- lightbox css -->
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <!-- TimeCircles css -->
+    <link rel="stylesheet" type="text/css" href="css/TimeCircles.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&amp;family=Poppins">
+    <!-- modernizr css -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<style>
+    .book {
+        position: relative;
+        display: flex;
+        margin: auto;
+        width: 40cqmin;
+        /*1* let pointer event go trough pages of lower Z than .book */
+        pointer-events: none;
+        transform-style: preserve-3d;
+        transition: translate 1s;
+        translate: calc(min(var(--c), 1) * 50%) 0%;
+        /* Incline on the X axis for pages preview */
+        rotate: 1 0 0 30deg;
+    }
+
+    .page {
+        /* PS: Don't go below thickness 0.5 or the pages might transpare */
+        --thickness: 4;
+        flex: none;
+        display: flex;
+        width: 100%;
+        font-size: 2cqmin;
+        /*1* allow pointer events on pages */
+        pointer-events: all;
+        user-select: none;
+        transform-style: preserve-3d;
+        transform-origin: left center;
+        transition:
+            transform 1s,
+            rotate 1s ease-in calc((min(var(--i), var(--c)) - max(var(--i), var(--c))) * 50ms);
+        translate: calc(var(--i) * -100%) 0px 0px;
+        transform: translateZ(calc((var(--c) - var(--i) - 0.5) * calc(var(--thickness) * .23cqmin)));
+        rotate: 0 1 0 calc(clamp(0, var(--c) - var(--i), 1) * -180deg);
+    }
+
+    .front,
+    .back {
+        position: relative;
+        flex: none;
+        width: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+        background-color: #fff;
+        /* Fix backface visibility Firefox: */
+        translate: 0px;
+    }
+
+    .back {
+        translate: -100% 0;
+        rotate: 0 1 0 180deg;
+    }
+
+
+    /* That's it. Your FlipBook customization styles: */
+
+    .book {
+        counter-reset: page -1;
+
+        & a {
+            color: inherit;
+        }
+    }
+
+    .page {
+        box-shadow: 0em .5em 1em -.2em #00000020;
+    }
+
+    .front,
+    .back {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        padding: 2em;
+        border: 1px solid #0002;
+
+        &:has(img) {
+            padding: 0;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::after {
+            position: absolute;
+            bottom: 1em;
+            counter-increment: page;
+            content: counter(page) ".";
+            font-size: 0.8em;
+        }
+    }
+
+    .cover {
+        &::after {
+            content: "";
+        }
+    }
+
+    .front {
+        &::after {
+            right: 1em;
+        }
+
+        background: linear-gradient(to left, #f7f7f7 80%, #eee 100%);
+        border-radius: .1em .5em .5em .1em;
+    }
+
+    .back {
+        &::after {
+            left: 1em;
+        }
+
+        background-image: linear-gradient(to right, #f7f7f7 80%, #eee 100%);
+        border-radius: .5em .1em .1em .5em;
+    }
+
+    .cover {
+        background: radial-gradient(circle farthest-corner at 80% 20%, hsl(150 80% 20% / .3) 0%, hsl(170 60% 10% / .1) 100%),
+            hsl(231, 32%, 29%) url("images/photo/mini-1.png") 50% / cover;
+        color: hsl(200 30% 98%);
+    }
+    .back-1 {
+        background: radial-gradient(circle farthest-corner at 80% 20%, hsl(150 80% 20% / .3) 0%, hsl(170 60% 10% / .1) 100%),
+            hsl(231, 32%, 29%) url("images/photo/mini-2.png") 50% / cover;
+        color: hsl(200 30% 98%);
+    }
+</style>
+
+<body>
+    <!--Preview area start here-->
+    <div class="template-preloader-rapper">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--End preview here -->
+    <!--Header area start here-->
+    <header>
+        <div class="header-top-area hidden-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="header-top-left">
+                            <ul>
+                                <!-- <li><i class="fa fa-phone"></i><a href="tel:+985-2356-14566">+985-2356-14566</a></li> -->
+                                <li><i class="fa fa-envelope-o"></i><a
+                                        href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="right-side-tool text-right">
+                            <div class="social-media-area">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle-area" id="sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                        <div class="logo-area">
+                            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                        <div class="main-menu d-flex justify-content-center" style="float: right;">
+                            <nav class="d-flex justify-content-center align-items-center" style="width: 100%;">
+                                <ul>
+                                    <li><a href="about-me.html">Behind The Shutter</a></li>
+                                    <li><a href="#">Through The Lens<i class="fa fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="Travel.html">Travel</a></li>
+                                            <li><a href="Glamour.html">Glamour</a></li>
+                                            <li><a href="Teacher.html">Teacher</a></li>
+                                            <li><a href="Celebrity.html">Celebrity</a></li>
+                                            <li><a href="Music.html">Music</a></li>
+                                            <li><a href="#">Gujarati Literature</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Lens On Paper<i class="fa fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="Travel.html">Travel</a></li>
+                                            <li><a href="Glamour.html">Glamour</a></li>
+                                            <li><a href="Teacher.html">Teacher</a></li>
+                                            <li><a href="Celebrity.html">Celebrity</a></li>
+                                            <li><a href="Music.html">Music</a></li>
+                                            <li><a href="#">Gujarati Literature</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="#">...Minimalistic!</a></li>
+                                    <li><a href="#">My Self Notes</a></li> -->
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                                <div class="btnnn ms-auto justify-content-space-between">
+                                    <a href="Notes.html" style="color: #fff;"><button class="custom-btn btn-11">My Self
+                                            Notes<div class="dot"></div></a>
+                                    <button class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button>
+                                </div>
+
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide Menu Section Start Here -->
+        <div class="mobile-menu-area">
+            <div class="container">
+              
+                <div class="mobile-logo-area">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mobile-menu">
+                            <nav id="dropdown">
+                                <ul>
+                                    <li class="active"><a href="index.html">Home</a>
+                                        <!-- <ul>
+                                            <li><a href="index.html">Home One</a></li>
+                                            <li><a href="index2.html">Home Two</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li><a href="about-me.html">About</a></li>
+                                    <li><a href="#">Photography<i class="fa fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="Travel.html">Travel</a></li>
+                                            <li><a href="Glamour.html">Glamour</a></li>
+                                            <li><a href="Teacher.html">Teacher</a></li>
+                                            <li><a href="Celebrity.html">Celebrity</a></li>
+                                            <li><a href="Music.html">Music</a></li>
+                                            <li><a href="#">Gujarati Literature</a></li>
+                                            <!-- <li><a href="portfolio1.html">Event</a></li> -->
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">Blog </a>
+                                        <!-- <ul>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-left.html">Blog Left Sidebar</a></li>
+                                            <li><a href="blog-right.html">Blog Right Sidebar</a></li>
+                                            <li><a href="single-blog.html">Single Blog</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <div class="btnnn ms-auto justify-content-space-between">
+                                        <a href="Notes.html" style="color: #fff;"><button class="custom-btn btn-11">My
+                                                Self
+                                                Notes<div class="dot"></div></a>
+                                        <button class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button>
+                                    </div>
+                                </ul>
+
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header area end here-->
+
+    <div class="inner-page-header-notes">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <!-- <div class="header-page-title">
+                        <h2>Travel Photoghraphy</h2>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="home-gellary-area pt-100 pb-100">
+        <div class="container">
+              <div class="section-title">
+                    <h2>...Minimalistic! Album</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mihi vero, inquit, placet agi subtilius
+                        et,
+                        ut ipse dixisti, pressius.Photograhy HTML is very </p>
+                </div>
+            <div class="book">
+                <div class="page">
+                    <div class="front cover">
+                        <h1>Minimalistic Photoghraphy</h1>
+                        <p>By<br>Sanjay Vaidya</p>
+                    </div>
+                    <div class="back back-1">
+                        <h2>Responsive</h2>
+                        <p>Fully responsive CSS flip book, thanks to the <code>cqmin</code> unit.</p>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="front">
+                        <!-- <p>Even more, the book height is dicated by the amount of content in the tallest page.
+                            The only thing you need to take care of is how much text you put into a page.</p> -->
+                            <img src="images/photo/mini-1.png" alt="Img 1">
+                    </div>
+                    <div class="back">
+                        <img src="images/photo/mini-2.png" alt="Img 1">
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="front">
+                        <h2>JS at its minimum</h2>
+                        <p>JavaScript is at its minimum. Basically it's only used to set the initial
+                            page index and assign click listeners to the pages. Modifies the CSS <b>Var</b>
+                            for the <i>current</i> page, and the rest is handled entirely by CSS.</p>
+                    </div>
+                    <div class="back">
+                        <p>Additionally JavaScript allows you to click on an anchor link in your
+                            text — without turning the page. You can also have multiple independent
+                            flip books in a single document. You're all covered.</p>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="front">
+                        <h2>Crafting CSS magic</h2>
+                        <p>The opened (<i>viewing</i>) pages of the flip book are always kept at the same elevation.
+                            This is necessary if your book has no inclination (is top-down-view).
+                            Have you noticed that you can also click on the pages edge? CSS will nicely animate the
+                            group
+                            of pages to skip with a staggered animation.</p>
+                    </div>
+                    <div class="back">
+                        <p>Like in this demo, you can change the perspective of the parent container and change the
+                            X axis rotation of the book for extra effect.</p>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="front">
+                        <p>The necessary FlipBook's CSS is barely 30 lines, there is no swipe, natural page flip
+                            angling,
+                            complex shadows, etc. in order to keep it as simple as possible.</p>
+                    </div>
+                    <div class="back">
+                        <p>Feel free to use and abuse this code. Drop me a line if you find it cool or useful, or just
+                            want to say <i>hi</i>.</p>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="front">
+                        <img src="https://picsum.photos/id/1073/600/600" alt="Img 2">
+                    </div>
+                    <div class="back cover">
+                        <h3>That's all, folks</h3>
+                        <p>FlipBook code and content:<br><a href="https://stackoverflow.com/users/383904/roko-c-buljan"
+                                target="_blank" rel="nofollow">Roko C. Buljan</a>
+                            <br>Original idea:<br><a href="https://stackoverflow.com/a/76978444/383904" target="_blank"
+                                rel="nofollow">Stack Overflow answer</a>
+                            <br>Images by: picsum.photos
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-top-area pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="single-footer footer-one">
+                            <img src="images/logo1.png" alt="">
+                            <!-- <h3>About Company</h3> -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum repellat, maxime vel
+                                alias impedit veritatis temporibus, sequi quos veniam eius optio corporis modi dicta
+                                molestias at inventore culpa, natus explicabo.</p>
+                            <div class="footer-social-media-area">
+                                <nav>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 hidden-sm">
+                        <div class="single-footer footer-two">
+                            <h3>Twitter Feed</h3>
+                            <nav>
+                                <ul>
+                                    <li><i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. <a href="#">https://twitter.com/?lang=en</a>
+                                        <br /> 3 days ago
+                                    </li>
+                                    <li><i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. <a href="#">https://twitter.com/?lang=en</a>
+                                        <br /> 3 days ago
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 hidden-md col-sm-12">
+                        <div class="single-footer footer-three">
+                            <h3>Flickr Photos</h3>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="images/flicker/1.png" alt="flicker photo"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/flicker/2.png" alt="flicker photo"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/flicker/3.png" alt="flicker photo"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/flicker/4.png" alt="flicker photo"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/flicker/5.png" alt="flicker photo"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/flicker/6.png" alt="flicker photo"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="single-footer footer-four margin-0">
+                            <h3>Corporate Office</h3>
+                            <nav>
+                                <ul>
+                                    <li><i class="fa fa-paper-plane-o"></i> 44 New Design Street, rne 00 USA</li>
+                                    <li><i class="fa fa-phone"></i> <a href="tel:+985-2356-14566">+985-2356-14566</a>
+                                    </li>
+                                    <li><i class="fa fa-envelope-o"></i> <a
+                                            href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></li>
+                                    <li><i class="fa fa-fax"></i> Fax: (123) 4589761</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-bottom">
+                            <p> &copy; Copyrights 2018. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area Section End Here -->
+
+    <!-- jquery latest version -->
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- jquery-ui js -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <!-- jquery.counterup js -->
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <!-- jquery light box -->
+    <script src="js/lightbox.min.js"></script>
+    <!-- isotope.pkgd.min js -->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- imagesloaded.pkgd.min js -->
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <!-- magnific popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- jQuery MixedIT Up -->
+    <script src="js/jquery.mixitup.min.js"></script>
+    <!-- Counter Down js -->
+    <script src="js/simplyCountdown.min.js"></script>
+    <!-- Nivo slider js -->
+    <script src="inc/custom-slider/js/jquery.nivo.slider.js"></script>
+    <script src="inc/custom-slider/home.js"></script>
+    <!-- jQuery Multistep form -->
+    <script src="js/multi_step_form.js"></script>
+    <!-- jquery.fancybox.pack js -->
+    <script src="inc/fancybox/jquery.fancybox.pack.js"></script>
+    <!-- plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- jquery weave effects -->
+    <script src="js/waves.js"></script>
+    <!-- TimeCircles js -->
+    <script src="js/TimeCircles.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+
+    <script>
+        const flipBook = (elBook) => {
+            elBook.style.setProperty("--c", 0); // Set current page
+            elBook.querySelectorAll(".page").forEach((page, idx) => {
+                page.style.setProperty("--i", idx);
+                page.addEventListener("click", (evt) => {
+                    if (evt.target.closest("a")) return;
+                    const curr = evt.target.closest(".back") ? idx : idx + 1;
+                    elBook.style.setProperty("--c", curr);
+                });
+            });
+        };
+
+        document.querySelectorAll(".book").forEach(flipBook);
+    </script>
+
+</body>
+
+</html>

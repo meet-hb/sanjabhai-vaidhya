@@ -19,14 +19,12 @@
         height: 489px;
         margin: 0;
         padding: 1px 10px;
-    }    .home-page-core-activities-area {
+    }    
+    .home-page-core-activities-area {
         height: 489px;
     }
 }
-
-
 /* Large devices (desktops, 992px and up) */
-
 @media only screen and (min-width:992px) and (max-width: 1199px) {
     .header-menu-area .menuright ul li .search-box {
         width: 230px;

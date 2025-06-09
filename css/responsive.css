@@ -1280,7 +1280,10 @@
     .home-about-area .about-content-list [class*="col-"] {
         width: 100%;
     }
-    .inner-page-header-notes{
+    .inner-page-header-notes {
+        padding: 70px 0 113px 0 !important;
+    }
+    .inner-page-header{
         padding: 51px 0 113px 0 !important;
     }
     .home-about-photo-contest-area .link-section a.primary-btn {
@@ -1886,6 +1889,9 @@
         padding: 51px 0 113px 0 !important;
     }
     .inner-page-header-travel{
+        padding: 51px 0 113px 0 !important;
+    }
+    .inner-page-header{
         padding: 51px 0 113px 0 !important;
     }
     .slider-area .slider-1 h1,

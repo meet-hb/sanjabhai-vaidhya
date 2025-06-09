@@ -1268,6 +1268,11 @@
     .skill-bar-area .skill-info h3 {
         font-size: 30px;
     }
+    .inner-page-header-notes{
+        padding: 51px 0 113px 0 !important;
+    }
+
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -1276,6 +1281,9 @@
     }
     .home-about-area .about-content-list [class*="col-"] {
         width: 100%;
+    }
+    .inner-page-header-notes{
+        padding: 51px 0 113px 0 !important;
     }
     .home-about-photo-contest-area .link-section a.primary-btn {
         padding: 8px 19px;
@@ -1875,6 +1883,12 @@
     }
     .header-menu-area .menuright ul li .search-box {
         width: 230px;
+    }
+    .inner-page-header-notes{
+        padding: 51px 0 113px 0 !important;
+    }
+    .inner-page-header-travel{
+        padding: 51px 0 113px 0 !important;
     }
     .slider-area .slider-1 h1,
     .slider-area .slider-2 h1 {

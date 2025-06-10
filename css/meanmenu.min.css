@@ -64,6 +64,7 @@ a.meanmenu-reveal {
   width: 100%;
   list-style-type: none
 }
+
 .mean-container .mean-nav ul li {
   background: #f8f8f8 none repeat scroll 0 0;
   float: left;
@@ -71,6 +72,7 @@ a.meanmenu-reveal {
   width: 100%;
   border-top: 1px solid#ddd;
 }
+
 .mean-container .mean-nav ul li a {
   background: #f8f8f8 none repeat scroll 0 0;
   color: #666666;
@@ -85,9 +87,11 @@ a.meanmenu-reveal {
   width: 90%;
   font-weight: bold;
 }
+
 .mobile-menu-area {
   background: #262626;
 }
+
 .mean-container .mean-nav ul li li a {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   opacity: 0.75;
@@ -99,26 +103,32 @@ a.meanmenu-reveal {
   text-transform: capitalize;
   color: #444;
 }
+
 .mean-container .mean-nav ul li.mean-last a {
   border-bottom: 0;
   margin-bottom: 0
 }
+
 .mean-container .mean-nav ul li li li a {
   width: 70%;
   padding: 1em 15%
 }
+
 .mean-container .mean-nav ul li li li li a {
   width: 60%;
   padding: 1em 20%
 }
+
 .mean-container .mean-nav ul li li li li li a {
   width: 50%;
   padding: 1em 25%
 }
+
 .mean-container .mean-nav ul li a:hover {
   background: #f8f8f8 none repeat scroll 0 0;
   color: #00C3FF;
 }
+
 .mean-container .mean-nav ul li a.mean-expand {
   width: 26px;
   height: 15px;
@@ -134,9 +144,11 @@ a.meanmenu-reveal {
   border: 0 !important;
   background: #F8F8F8;
 }
+
 .mean-container .mean-nav ul li a.mean-expand:hover {
   background: #f8f8f8;
 }
+
 .mean-container .mean-push {
   float: left;
   width: 100%;
@@ -144,20 +156,24 @@ a.meanmenu-reveal {
   margin: 0;
   clear: both
 }
+
 .mean-nav .wrapper {
   width: 100%;
   padding: 0;
   margin: 0
 }
+
 .mean-container .mean-bar,
 .mean-container .mean-bar * {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box
 }
+
 .mean-remove {
   display: none !important
 }
+
 .mean-container .mean-bar::after {
   background: transparent url("https://rstheme.com/") no-repeat scroll 0 0;
   color: #ffffff;

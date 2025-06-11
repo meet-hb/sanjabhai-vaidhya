@@ -352,7 +352,7 @@
             $('#sticky').addClass('stick');
         } else {
             $('#sticky').removeClass('stick');
-        }
+        }Business
 
     });
 
@@ -360,7 +360,7 @@
         Business active
        ------------------------------ */
     $(".total-business").owlCarousel({
-        autoPlay: false,
+        autoPlay: true,
         slideSpeed: 2000,
         pagination: false,
         navigation: true,

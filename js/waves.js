@@ -38,66 +38,51 @@
             left: box.left + win.pageXOffset - docElem.clientLeft
         };
     }
-
     function convertStyle(obj) {
         var style = '';
-
         for (var a in obj) {
             if (obj.hasOwnProperty(a)) {
                 style += (a + ':' + obj[a] + ';');
             }
         }
-
         return style;
     }
-
     var Effect = {
-
         // Effect delay
         duration: 750,
-
         show: function(e, element) {
-
             // Disable right click
             if (e.button === 2) {
                 return false;
             }
-
             var el = element || this;
-
             // Create ripple
             var ripple = document.createElement('div');
             ripple.className = 'waves-ripple';
             el.appendChild(ripple);
-
             // Get click coordinate and element witdh
             var pos         = offset(el);
             var relativeY   = (e.pageY - pos.top);
             var relativeX   = (e.pageX - pos.left);
             var scale       = 'scale('+((el.clientWidth / 100) * 10)+')';
-
             // Support for touch devices
             if ('touches' in e) {
               relativeY   = (e.touches[0].pageY - pos.top);
               relativeX   = (e.touches[0].pageX - pos.left);
             }
-
             // Attach data to element
             ripple.setAttribute('data-hold', Date.now());
             ripple.setAttribute('data-scale', scale);
             ripple.setAttribute('data-x', relativeX);
             ripple.setAttribute('data-y', relativeY);
-
             // Set ripple position
             var rippleStyle = {
                 'top': relativeY+'px',
                 'left': relativeX+'px'
             };
-
             ripple.className = ripple.className + ' waves-notransition';
             ripple.setAttribute('style', convertStyle(rippleStyle));
             ripple.className = ripple.className.replace('waves-notransition', '');
-
             // Scale the ripple
             rippleStyle['-webkit-transform'] = scale;
             rippleStyle['-moz-transform'] = scale;

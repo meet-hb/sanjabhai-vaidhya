@@ -40,15 +40,6 @@
     }
   }
 })();
-
-// Place any jQuery/helper plugins in here.
-
-/*!
- * scrollup v2.4.1
- * Url: http://markgoodyear.com/labs/scrollup/
- * Copyright (c) Mark Goodyear — @markgdyr — http://markgoodyear.com
- * License: MIT
- */
 !(function (l, o, e) {
   "use strict";
   (l.fn.scrollUp = function (o) {

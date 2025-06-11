@@ -90,26 +90,20 @@
             rippleStyle['-o-transform'] = scale;
             rippleStyle.transform = scale;
             rippleStyle.opacity   = '1';
-
             rippleStyle['-webkit-transition-duration'] = Effect.duration + 'ms';
             rippleStyle['-moz-transition-duration']    = Effect.duration + 'ms';
             rippleStyle['-o-transition-duration']      = Effect.duration + 'ms';
             rippleStyle['transition-duration']         = Effect.duration + 'ms';
-
             rippleStyle['-webkit-transition-timing-function'] = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
             rippleStyle['-moz-transition-timing-function']    = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
             rippleStyle['-o-transition-timing-function']      = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
             rippleStyle['transition-timing-function']         = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
-
             ripple.setAttribute('style', convertStyle(rippleStyle));
         },
-
         hide: function(e) {
             TouchHandler.touchup(e);
-
             var el = this;
             var width = el.clientWidth * 1.4;
-
             // Get first ripple
             var ripple = null;
             var ripples = el.getElementsByClassName('waves-ripple');
@@ -118,19 +112,15 @@
             } else {
                 return false;
             }
-
             var relativeX   = ripple.getAttribute('data-x');
             var relativeY   = ripple.getAttribute('data-y');
             var scale       = ripple.getAttribute('data-scale');
-
             // Get delay beetween mousedown and mouse leave
             var diff = Date.now() - Number(ripple.getAttribute('data-hold'));
             var delay = 350 - diff;
-
             if (delay < 0) {
                 delay = 0;
             }
-
             // Fade out ripple after delay
             setTimeout(function() {
                 var style = {
@@ -149,9 +139,7 @@
                     '-o-transform': scale,
                     'transform': scale,
                 };
-
                 ripple.setAttribute('style', convertStyle(style));
-
                 setTimeout(function() {
                     try {
                         el.removeChild(ripple);
@@ -161,35 +149,26 @@
                 }, Effect.duration);
             }, delay);
         },
-
         // Little hack to make <input> can perform waves effect
         wrapInput: function(elements) {
             for (var a = 0; a < elements.length; a++) {
                 var el = elements[a];
-
                 if (el.tagName.toLowerCase() === 'input') {
                     var parent = el.parentNode;
-
                     // If input already have parent just pass through
                     if (parent.tagName.toLowerCase() === 'i' && parent.className.indexOf('waves-effect') !== -1) {
                         continue;
                     }
-
                     // Put element class and style to the specified parent
                     var wrapper = document.createElement('i');
                     wrapper.className = el.className + ' waves-input-wrapper';
-
                     var elementStyle = el.getAttribute('style');
-
                     if (!elementStyle) {
                         elementStyle = '';
                     }
-
                     wrapper.setAttribute('style', elementStyle);
-
                     el.className = 'waves-button-input';
                     el.removeAttribute('style');
-
                     // Put element as child
                     parent.replaceChild(wrapper, el);
                     wrapper.appendChild(el);

@@ -267,7 +267,6 @@
       });
     });
   }
-
   // project Filter
   if ($(".gridFilter li").length) {
     var projectfiler = $(".gridFilter li");
@@ -283,7 +282,6 @@
     mixitup active
     ------------------------------ */
   $("#Container").mixItUp();
-
   /*---------------------
     countdown
     --------------------- */
@@ -306,14 +304,11 @@
   var navListItems = $("div.setup-panel div a"),
     allWells = $(".setup-content"),
     allNextBtn = $(".nextBtn");
-
   allWells.hide();
-
   navListItems.on("click", function (e) {
     e.preventDefault();
     var $target = $($(this).attr("href")),
       $item = $(this);
-
     if (!$item.hasClass("disabled")) {
       navListItems.removeClass("btn-primary").addClass("btn-default");
       $item.addClass("btn-primary");
@@ -322,7 +317,6 @@
       $target.find("input:eq(0)").focus();
     }
   });
-
   allNextBtn.on("click", function () {
     var curStep = $(this).closest(".setup-content"),
       curStepBtn = curStep.attr("id"),
@@ -332,7 +326,6 @@
         .children("a"),
       curInputs = curStep.find("input[type='text'],input[type='url']"),
       isValid = true;
-
     $(".form-group").removeClass("has-error");
     for (var i = 0; i < curInputs.length; i++) {
       if (!curInputs[i].validity.valid) {
@@ -340,12 +333,9 @@
         $(curInputs[i]).closest(".form-group").addClass("has-error");
       }
     }
-
     if (isValid) nextStepWizard.removeAttr("disabled").trigger("click");
   });
-
   $("div.setup-panel div a.btn-primary").trigger("click");
-
   /*--------------------------
      Sticky Menu Activation Code
     ---------------------------- */
@@ -357,7 +347,6 @@
     }
     Business;
   });
-
   /*----------------------------
         Business active
        ------------------------------ */
@@ -405,7 +394,6 @@
     responsive: true,
     pagination: false,
   });
-
   /*-------------------------------------
     Single Product Tab  activation code
     -------------------------------------*/
@@ -436,7 +424,6 @@
       " - $" +
       $("#slider-range").slider("values", 1)
   );
-
   jQuery(document).on("ready", function () {
     /*
         ==========================================
@@ -448,7 +435,6 @@
       jQuery(".template-preloader-rapper").fadeOut(500);
     });
   });
-
   /*==========================================
        CountDownTimer
     ==========================================*/

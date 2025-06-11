@@ -134,7 +134,6 @@
                 .toString(16)
                 .substring(1);
     }
-
     /**
      * Creates a unique id
      * @returns {String}
@@ -143,7 +142,6 @@
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
                 s4() + '-' + s4() + s4() + s4();
     }
-
     /**
      * Array.prototype.indexOf fallback for IE8
      * @param {Mixed} mixed
@@ -170,7 +168,6 @@
             return -1;
         };
     }
-
     function parse_date(str) {
         var match = str.match(/^[0-9]{4}-[0-9]{2}-[0-9]{2}\s[0-9]{1,2}:[0-9]{2}:[0-9]{2}$/);
         if (match !== null && match.length > 0) {
@@ -189,7 +186,6 @@
         // Cant find anything
         return new Date();
     }
-
     function parse_times(diff, old_diff, total_duration, units, floor) {
         var raw_time = {};
         var raw_old_time = {};
@@ -197,44 +193,36 @@
         var pct = {};
         var old_pct = {};
         var old_time = {};
-
         var greater_unit = null;
         for(var i = 0; i < units.length; i++) {
             var unit = units[i];
             var maxUnits;
-
             if (greater_unit === null) {
                 maxUnits = total_duration / secondsIn[unit];
             }
             else {
                 maxUnits = secondsIn[greater_unit] / secondsIn[unit];
             }
-
             var curUnits = (diff / secondsIn[unit]);
             var oldUnits = (old_diff / secondsIn[unit]);
-            
             if(floor) {
                 if(curUnits > 0) curUnits = Math.floor(curUnits);
                 else curUnits = Math.ceil(curUnits);
                 if(oldUnits > 0) oldUnits = Math.floor(oldUnits);
                 else oldUnits = Math.ceil(oldUnits);
             }
-            
             if (unit !== "Days") {
                 curUnits = curUnits % maxUnits;
                 oldUnits = oldUnits % maxUnits;
             }
-
             raw_time[unit] = curUnits;
             time[unit] = Math.abs(curUnits);
             raw_old_time[unit] = oldUnits;
             old_time[unit] = Math.abs(oldUnits);
             pct[unit] = Math.abs(curUnits) / maxUnits;
             old_pct[unit] = Math.abs(oldUnits) / maxUnits;
-
             greater_unit = unit;
         }
-
         return {
             raw_time: raw_time,
             raw_old_time: raw_old_time,
@@ -244,7 +232,6 @@
             old_pct: old_pct
         };
     }
-
     var TC_Instance_List = {};
     function updateUsedWindow() {
         if(typeof useWindow.TC_Instance_List !== "undefined") {
@@ -255,14 +242,12 @@
         }
         initializeAnimationFrameHandler(useWindow);
     };
-    
     function initializeAnimationFrameHandler(w) {
         var vendors = ['webkit', 'moz'];
         for (var x = 0; x < vendors.length && !w.requestAnimationFrame; ++x) {
             w.requestAnimationFrame = w[vendors[x] + 'RequestAnimationFrame'];
             w.cancelAnimationFrame = w[vendors[x] + 'CancelAnimationFrame'];
         }
-
         if (!w.requestAnimationFrame || !w.cancelAnimationFrame) {
             w.requestAnimationFrame = function(callback, element, instance) {
                 if (typeof instance === "undefined")
@@ -280,8 +265,6 @@
             };
         }
     };
-    
-
     var TC_Instance = function(element, options) {
         this.element = element;
         this.container;

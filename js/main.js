@@ -164,7 +164,6 @@
        Testimonail jQuery activation code
        -------------------------------------*/
     $(".testimonial-area").owlCarousel({
-
         // Most important owl features
         items: 1,
         itemsDesktop: [1199, 1],
@@ -180,7 +179,6 @@
         // Responsive
         responsive: true,
         pagination: true,
-
     });
     /*--------------------------
     scrollUp
@@ -197,7 +195,6 @@
     $("li#search > i").on('click', function() {
         $(".search-box").slideToggle('slow');
     });
-
     /*------------------------------------
     SideSlide menu Activation
     -------------------------------------*/
@@ -214,7 +211,6 @@
         delay: 50,
         time: 3000
     });
-
     // magnificPopup init
     $('.image-popup').magnificPopup({
         type: 'image',
@@ -227,7 +223,6 @@
             enabled: true
         }
     });
-
     // image loaded portfolio init
     var gridfilter = $('.grid');
         if(gridfilter.length){

@@ -1,6 +1,5 @@
 $(document).ready(function(){
 var count=0; // to count blank fields
-
 /*------------validation function-----------------*/
 $(".submit_btn").click(function(event){
 //fetching radio button by name

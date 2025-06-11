@@ -682,19 +682,16 @@
       );
       this.data.attributes.context.lineWidth =
         this.data.attributes.line_width * this.config.bg_width;
-
       // line color
       this.data.attributes.context.strokeStyle = this.config.circle_bg_color;
       this.data.attributes.context.stroke();
     }
-
     // Direction
     var startAngle, endAngle, counterClockwise;
     var defaultOffset = -0.5 * Math.PI;
     var fullCircle = 2 * Math.PI;
     startAngle = defaultOffset + (this.config.start_angle / 360) * fullCircle;
     var offset = 2 * pct * Math.PI;
-
     if (this.config.direction === "Both") {
       counterClockwise = false;
       startAngle -= offset / 2;
@@ -708,7 +705,6 @@
         endAngle = startAngle - offset;
       }
     }
-
     this.data.attributes.context.beginPath();
     this.data.attributes.context.arc(
       x,
@@ -719,7 +715,6 @@
       counterClockwise
     );
     this.data.attributes.context.lineWidth = this.data.attributes.line_width;
-
     // line color
     this.data.attributes.context.strokeStyle = color;
     this.data.attributes.context.stroke();

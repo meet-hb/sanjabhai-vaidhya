@@ -85,15 +85,7 @@
         Months: 2678400,
         Years: 31536000
     };
-
-    /**
-     * Converts hex color code into object containing integer values for the r,g,b use
-     * This function (hexToRgb) originates from:
-     * http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
-     * @param {string} hex color code
-     */
     function hexToRgb(hex) {
-
         // Verify already RGB (e.g. "rgb(0,0,0)") or RGBA (e.g. "rgba(0,0,0,0.5)")
         var rgba = /^rgba?\(([\d]+),([\d]+),([\d]+)(,([\d\.]+))?\)$/;
         if(rgba.test(hex)) {

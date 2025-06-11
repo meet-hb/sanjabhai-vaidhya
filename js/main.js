@@ -43,7 +43,6 @@
     });
 
     /*About Team Jquery*/
-
     $(".total-team").owlCarousel({
         autoPlay: true,
         slideSpeed: 2000,
@@ -60,7 +59,6 @@
        Related Product jQuery activation code
        -------------------------------------*/
     $(".single-product-store").owlCarousel({
-
         // Most important owl features
         items: 3,
         itemsDesktop: [1199, 3],
@@ -76,7 +74,6 @@
         // Responsive
         responsive: true,
         pagination: false,
-
     });
     /*-------------------------------------
        Related Product jQuery activation code

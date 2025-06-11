@@ -118,7 +118,6 @@
         pagination: false,
 
     });
-	
 	 /*-------------------------------------
        Single Photo Contest jQuery activation code
        -------------------------------------*/
@@ -140,7 +139,6 @@
         pagination: false,
 
     });
-	
     /*-------------------------------------
        Single Photo slide jQuery activation code
        -------------------------------------*/
@@ -161,7 +159,6 @@
         // Responsive
         responsive: true,
         pagination: false,
-
     });
     /*-------------------------------------
        Testimonail jQuery activation code
@@ -185,8 +182,6 @@
         pagination: true,
 
     });
-
-
     /*--------------------------
     scrollUp
     ---------------------------- */

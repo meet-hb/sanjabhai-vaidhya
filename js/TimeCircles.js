@@ -653,7 +653,6 @@
       }, this.element);
     }
   };
-
   TC_Instance.prototype.drawArc = function (x, y, color, pct) {
     if (this.data.attributes.context === null) return;
 
@@ -669,7 +668,6 @@
         clear_radius * 2
       );
     }
-
     if (this.config.use_background) {
       this.data.attributes.context.beginPath();
       this.data.attributes.context.arc(
@@ -719,12 +717,10 @@
     this.data.attributes.context.strokeStyle = color;
     this.data.attributes.context.stroke();
   };
-
   TC_Instance.prototype.radialFade = function (x, y, color, from, key) {
     // TODO: Make fade_time option
     var rgb = hexToRgb(color);
     var _this = this; // We have a few inner scopes here that will need access to our instance
-
     var step = 0.2 * (from === 1 ? -1 : 1);
     var i;
     for (i = 0; from <= 1 && from >= 0; i++) {

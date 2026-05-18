@@ -198,7 +198,7 @@
             position: relative;
         }
 
-        .interview-intro-paragraph:first-of-type::first-letter {
+        .interview-intro-paragraph.drop-cap::first-letter {
             font-family: 'Playfair Display', serif;
             font-size: 55px;
             font-weight: 700;
@@ -514,11 +514,7 @@
                     <div class="col-lg-8 col-md-7 col-12">
                         <div class="interview-body">
                             <!-- Translation Dropdown Section -->
-                            <div class="translation-controls-wrapper d-flex align-items-center justify-content-between mb-4 pb-3" style="border-bottom: 1px solid #eae7e2; gap: 15px; flex-wrap: wrap;">
-                                <div class="d-flex align-items-center">
-                                    <i class="fa fa-language text-muted mr-2" style="font-size: 24px; color: #888;"></i>
-                                    <span style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #666;">Read Interview in:</span>
-                                </div>
+                            <div class="translation-controls-wrapper d-flex align-items-center justify-content-end mb-4 pb-3" style="border-bottom: 1px solid #eae7e2; gap: 15px; flex-wrap: wrap;">
                                 <select id="interview-lang-selector" class="form-control" style="width: auto; display: inline-block; font-size: 14px; font-weight: 500; font-family: 'Poppins', sans-serif; border: 1px solid #eae7e2; border-radius: 8px; padding: 6px 12px; background-color: #fff; cursor: pointer; color: #111; box-shadow: 0 2px 8px rgba(0,0,0,0.02); transition: all 0.3s ease; outline: none;">
                                     <option value="en">English (Original)</option>
                                     <option value="hi">हिंदी (Hindi)</option>
@@ -528,7 +524,7 @@
                                 </select>
                             </div>
 
-                            <div class="interview-intro-paragraph" data-translate="intro-1">
+                            <div class="interview-intro-paragraph drop-cap" data-translate="intro-1">
                                 His name appears at art exhibitions across Gujarat and India, and on the covers of many photo-books and coffee-table volumes. Yet public language often falls short of the presence behind those images — a photographer who makes scenes and faces speak through his lens, a quiet master of the craft, a poet with a camera: <strong>Sanjay Vaidya</strong>.
                             </div>
                             <div class="interview-intro-paragraph" style="font-size: 16px; line-height: 1.8;" data-translate="intro-2">

@@ -304,52 +304,52 @@
 </style>
 <style>
     .wrapper {
-        width: 500px;
-        margin: 30px auto;
+        width: 90vw;
+        max-width: 500px;
+        margin: 5vw auto;
         position: relative;
-        height: 500px;
+        height: auto;
+        min-height: 300px;
         background: url('https://subtlepatterns.com/patterns/dark_leather.png');
         z-index: -15;
         border: 2px dashed grey;
-        box-shadow: 0 0 0 15px #111111;
-        border-radius: 20px;
+        box-shadow: 0 0 0 3vw #111111;
+        border-radius: 4vw;
+        padding: 4vw 0;
     }
 
     figure {
-        width: 270px;
-        height: 250px;
-        position: absolute;
+        width: 60vw;
+        max-width: 270px;
+        height: auto;
+        min-height: 150px;
+        position: relative;
         background: white;
-        padding: 15px;
+        padding: 3vw;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        margin: 2vw auto;
     }
 
     .click {
-        width: 270px;
-        height: 200px;
+        width: 100%;
+        height: auto;
         border: 1px solid grey;
+        aspect-ratio: 4/3;
+        object-fit: cover;
     }
 
-    figure:first-child {
-        transform: rotate(25deg);
-        z-index: -12;
-        top: 10px;
-        right: 50px;
-
-    }
-
-    figure:nth-child(2) {
-        transform: rotate(-20deg);
-        z-index: -13;
-        top: 150px
-    }
-
+    figure:first-child,
+    figure:nth-child(2),
     figure:nth-child(3) {
-        transform: rotate(-15deg);
-        z-index: -14;
-        top: 40px;
-        left: 60px;
+        transform: none;
+        z-index: auto;
+        top: auto;
+        right: auto;
+        left: auto;
+        margin: 2vw auto;
     }
+
+
 
     /* img{
   width:270px;
@@ -473,21 +473,17 @@
         background: black;
     }
 
-
-
-
-
-
-
-
     .book-wrapper {
         position: relative;
         margin: 2% auto;
-        width: 670px;
+        width: 100%;
+        max-width: 670px;
     }
 
     .book-wrapper img {
         filter: drop-shadow(15px 5px 5px #494338);
+        max-width: 100%;
+        height: auto;
     }
 
     .pages-container {
@@ -546,7 +542,8 @@
 
     .line-title {
         position: relative;
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
     }
 
     .line-title::before,
@@ -621,8 +618,8 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
-        transform: translateY(calc(100% - 54px));
-        -webkit-transform: translateY(calc(100% - 54px));
+        transform: translateY(calc(100% - 70px));
+        -webkit-transform: translateY(calc(100% - 70px));
         transition: all 0.4s ease-in-out;
         -webkit-transition: all 0.4s ease-in-out;
     }
@@ -668,8 +665,8 @@
         }
 
         .game-section .item-desc {
-            transform: translateY(calc(100% - 46px));
-            -webkit-transform: translateY(calc(100% - 46px));
+            transform: translateY(calc(100% - 70px));
+            -webkit-transform: translateY(calc(100% - 70px));
         }
     }
 
@@ -694,37 +691,48 @@
         }
 
         .game-section .item-desc {
-            transform: translateY(calc(100% - 42px));
-            -webkit-transform: translateY(calc(100% - 42px));
+            transform: translateY(calc(100% - 70px));
+            -webkit-transform: translateY(calc(100% - 70px));
+        }
+    }
+
+    @media (max-width: 767px) {
+        .line-title {
+            width: 250px;
         }
 
-        @media (max-width: 767px) {
-            .line-title {
-                width: 250px;
-            }
+        /* -------- Landing page ------- */
+        .game-section {
+            padding: 30px 15px 20px;
+        }
 
-            /* -------- Landing page ------- */
-            .game-section {
-                padding: 30px 15px 20px;
-            }
+        .game-section .item {
+            margin: 0 10px 40px;
+            width: 200px;
+            height: 280px;
+        }
 
-            .game-section .item {
-                margin: 0 10px 40px;
-                width: 200px;
-                height: 280px;
-            }
+        .game-section .item.active {
+            width: 270px;
+            box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+        }
 
-            .game-section .item.active {
-                width: 270px;
-                box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-                -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-            }
+        .game-section .item-desc {
+            padding: 0 14px 5px;
+            transform: translateY(calc(100% - 70px));
+            -webkit-transform: translateY(calc(100% - 70px));
+        }
+    }
 
-            .game-section .item-desc {
-                padding: 0 14px 5px;
-                transform: translateY(calc(100% - 42px));
-                -webkit-transform: translateY(calc(100% - 42px));
-            }
+    @media (min-width: 1200px) {
+
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            max-width: 1320px;
         }
     }
 </style>
@@ -817,9 +825,9 @@
                                     <li><a href="#">My Self Notes</a></li> -->
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
-                                <div class="btnnn ms-auto justify-content-space-between">
+                                <div class="btnnn d-flex align-items-center ms-auto">
                                     <a href="Notes.html" style="color: #fff;"><button class="custom-btn btn-11">My Self
-                                            Notes<div class="dot"></div></a>
+                                            Notes<div class="dot"></div></button></a>
 
                                     <a href="Minimalistic.html"><button
                                             class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button></a>
@@ -865,12 +873,12 @@
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact Us</a></li>
-                                    <div class="btnnn ms-auto justify-content-space-between">
+                                    <li class="btnnn d-flex align-items-center mt-2">
                                         <a href="Notes.html" style="color: #fff;"><button class="custom-btn btn-11">My
                                                 Self
-                                                Notes<div class="dot"></div></a>
-                                        <button class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button>
-                                    </div>
+                                                Notes<div class="dot"></div></button></a>
+                                        <a href="Minimalistic.html"><button class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button></a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -954,7 +962,7 @@
     <div class="home-about-area pt-90 pb-90">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md--12 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="col-lg-6 col-md-12" data-wow-delay="0.2s">
                     <div class="about-content">
                         <h3>Sanjay <span>Vaidya</span></h3>
                         <p>A Glamour Photographer since 1985, Sanjay Vaidya, turns the spotlight on some of the
@@ -978,7 +986,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 hidden-md hidden-sm wow fadeInRight" data-wow-delay="0.2s">
+                <div class="col-lg-6 hidden-md hidden-sm" data-wow-delay="0.2s">
                     <div class="about-featured-image">
                         <img src="images/about-me/Sanjaybhai.png" alt="">
                     </div>
@@ -996,7 +1004,7 @@
                     ut ipse dixisti, pressius.Photograhy HTML is very </p>
             </div>
             <section class="game-section">
-                <!-- <h2 class="line-title">trending games</h2> -->
+                <h2 class="line-title">trending games</h2>
                 <div class="owl-carousel custom-carousel owl-theme">
                     <div class="item active" style="background-image: url(images/portfolio/img1.png);">
                         <div class="item-desc">
@@ -1053,7 +1061,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
         </section>
     </div>
     <div class="home-single-contest gray-bg pt-90 pb-90">
@@ -1064,7 +1072,7 @@
                         <div class="section-title">
                             <h2>My<span>Books</span></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mihi vero, inquit, placet agi
-                                subtilius et, ut ipse dixisti, pressius.Photograhy HTML is very 
+                                subtilius et, ut ipse dixisti, pressius.Photograhy HTML is very
                             </p>
                         </div>
                         <div class="about-content">
@@ -1456,11 +1464,16 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-12">
                         <div class="single-footer footer-one">
-                            <img src="images/logo1.png" alt="">
+                            <img src="images/logo1.png" alt>
                             <!-- <h3>About Company</h3> -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum repellat, maxime vel
-                                alias impedit veritatis temporibus, sequi quos veniam eius optio corporis modi dicta
-                                molestias at inventore culpa, natus explicabo.
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Earum repellat, maxime
+                                vel
+                                alias impedit veritatis temporibus,
+                                sequi quos veniam eius optio corporis
+                                modi dicta
+                                molestias at inventore culpa, natus
+                                explicabo.
                             </p>
                             <div class="footer-social-media-area">
                                 <nav>
@@ -1481,11 +1494,15 @@
                             <h3>Twitter Feed</h3>
                             <nav>
                                 <ul>
-                                    <li><i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur
+                                    <li><i class="fa fa-twitter"></i>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing elit. <a href="#">https://twitter.com/?lang=en</a>
                                         <br /> 3 days ago
                                     </li>
-                                    <li><i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur
+                                    <li><i class="fa fa-twitter"></i>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur
                                         adipisicing elit. <a href="#">https://twitter.com/?lang=en</a>
                                         <br /> 3 days ago
                                     </li>
@@ -1523,11 +1540,14 @@
                             <h3>Corporate Office</h3>
                             <nav>
                                 <ul>
-                                    <li><i class="fa fa-paper-plane-o"></i> 44 New Design Street, rne 00 USA</li>
+                                    <li><i class="fa fa-paper-plane-o"></i>
+                                        44 New Design Street, rne 00
+                                        USA</li>
                                     <li><i class="fa fa-phone"></i> <a href="tel:+985-2356-14566">+985-2356-14566</a>
                                     </li>
-                                    <li><i class="fa fa-envelope-o"></i><a
-                                            href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></li>
+                                    <li><i class="fa fa-envelope-o"></i>
+                                        <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>
+                                    </li>
                                     <li><i class="fa fa-fax"></i> Fax: (123) 4589761</li>
                                 </ul>
                             </nav>
@@ -1541,7 +1561,8 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="footer-bottom">
-                            <p> &copy; Copyrights 2018. All rights reserved.</p>
+                            <p> &copy; Copyrights 2018. All rights
+                                reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -4952,23 +4973,61 @@
 
         })(jQuery);
 
-        $(window).ready(function () {
-            $('.pages').turn({
-                duration: 1500,
-                width: 620,
-                height: 445,
-                autoplay: true,
-                //  acceleration: true,
-                //  display: 'single',
-                // autoCenter: true,
-                turnCorners: "bl,br",
-                elevation: 300,
-                when: {
-                    turned: function (e, page) {
-                        console.log('Current view: ', $(this).turn('view'));
+        $(window).on('load resize', function () {
+            var container = $('.pages-container');
+            var cWidth = container.width();
+            var cHeight = container.height();
+
+            // Default original dimensions of the book
+            var baseWidth = 620;
+            var baseHeight = 445;
+
+            if (cWidth === 0) cWidth = baseWidth;
+            if (cHeight === 0) cHeight = baseHeight;
+
+            // Calculate scale factors
+            var scaleX = cWidth / baseWidth;
+            var scaleY = cHeight / baseHeight;
+
+            // Initialize turn.js only once
+            if (!$('.pages').turn('is')) {
+                $('.pages').turn({
+                    duration: 1500,
+                    width: baseWidth,
+                    height: baseHeight,
+                    autoplay: true,
+                    turnCorners: "bl,br",
+                    elevation: 300,
+                    when: {
+                        turned: function (e, page) {
+                            console.log('Current view: ', $(this).turn('view'));
+                        }
                     }
-                }
+                });
+            }
+
+            // Apply scaling to the pages so text and layout scale perfectly
+            $('.pages').css({
+                'transform-origin': 'top left',
+                'transform': 'scale(' + scaleX + ', ' + scaleY + ')'
             });
+
+            // Camera Responsive Scaling
+            var camContainer = $('#camera').parent();
+            var camWidth = camContainer.width();
+            if (camWidth > 0 && camWidth < 500) {
+                var camScale = camWidth / 500;
+                $('#camera').css({
+                    'transform-origin': 'top left',
+                    'transform': 'scale(' + camScale + ')',
+                    'margin-bottom': '-' + (300 * (1 - camScale)) + 'px'
+                });
+            } else {
+                $('#camera').css({
+                    'transform': 'none',
+                    'margin-bottom': '0'
+                });
+            }
         });
 
 

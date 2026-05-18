@@ -161,14 +161,24 @@
 
     .cover {
         background: radial-gradient(circle farthest-corner at 80% 20%, hsl(150 80% 20% / .3) 0%, hsl(170 60% 10% / .1) 100%),
-            hsl(231, 32%, 29%) url("images/photo/mini-1.png") 50% / cover;
+            hsl(231, 32%, 29%) url("images/photo/SV-Img.png") 50% / cover;
         color: hsl(200 30% 98%);
     }
 
     .back-1 {
         background: radial-gradient(circle farthest-corner at 80% 20%, hsl(150 80% 20% / .3) 0%, hsl(170 60% 10% / .1) 100%),
-            hsl(231, 32%, 29%) url("images/photo/mini-2.png") 50% / cover;
+            hsl(231, 32%, 29%) url("images/photo/SV-Img-one.png") 50% / cover;
         color: hsl(200 30% 98%);
+    }
+
+    @media (max-width: 767px) {
+        .book {
+            width: 48vw;
+            height: 70vw;
+        }
+        .page {
+            font-size: 2.5vw;
+        }
     }
 </style>
 
@@ -248,10 +258,10 @@
                                     </li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
-                                <div class="btnnn ms-auto justify-content-space-between">
+                                <div class="btnnn d-flex align-items-center ms-auto">
                                     <a href="Notes.html" style="color: #fff;"><button class="custom-btn btn-11">My Self
-                                            Notes<div class="dot"></div></a>
-                                    <button class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button>
+                                            Notes<div class="dot"></div></button></a>
+                                    <a href="Minimalistic.html"><button class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button></a>
                                 </div>
                             </nav>
                         </div>
@@ -294,11 +304,11 @@
                                     </li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
-                                <div class="btnnn ms-auto justify-content-space-between">
+                                <li class="btnnn d-flex align-items-center mt-2">
                                     <a href="Notes.html" style="color: #fff;"><button class="custom-btn btn-11">My Self
-                                            Notes<div class="dot"></div></a>
-                                    <button class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button>
-                                </div>
+                                            Notes<div class="dot"></div></button></a>
+                                    <a href="Minimalistic.html"><button class="custom-btn btn-3 mx-2"><span>...Minimalistic!</span></button></a>
+                                </li>
                             </nav>
                         </div>
                     </div>

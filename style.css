@@ -59,11 +59,11 @@
 --------------------------------------------------------*/
 html,
 body {
-  height: 100%;
   font-size: 14px;
   color: #333333;
   font-family: cursive;
   vertical-align: baseline;
+  overflow-x: clip;
   line-height: 26px;
   font-weight: 400;
 }
@@ -662,15 +662,15 @@ ul {
   color: #444444;
 }
 
-.header-middle-area.stick {
-  background: #ffffff;
-  position: fixed !important;
-  top: 0px;
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   z-index: 9999;
-  margin: 0 auto !important;
-  padding: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+}
+
+header.stick {
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   -webkit-animation-duration: .5s;
@@ -683,11 +683,11 @@ ul {
   animation-fill-mode: both;
 }
 
-.header-middle-area.stick .main-menu ul li a {
+header.stick .main-menu ul li a {
   color: #444444;
 }
 
-.header-middle-area.stick .menuright ul li a {
+header.stick .menuright ul li a {
   color: #444444;
 }
 
@@ -906,7 +906,8 @@ ul {
 }
 
 .slider-area .carousel .carousel-inner .item.active .carousel-caption ul li .slider-content {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   position: absolute;
   display: table;
   vertical-align: middle;

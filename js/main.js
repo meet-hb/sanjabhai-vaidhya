@@ -341,11 +341,10 @@
     ---------------------------- */
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > 100) {
-      $("#sticky").addClass("stick");
+      $("header").addClass("stick");
     } else {
-      $("#sticky").removeClass("stick");
+      $("header").removeClass("stick");
     }
-    Business;
   });
   /*----------------------------
         Business active

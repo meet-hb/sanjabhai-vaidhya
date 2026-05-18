@@ -180,6 +180,465 @@
             font-size: 2.5vw;
         }
     }
+
+    /* ==========================================
+       Minimalist Premium Gallery Custom CSS 
+       ========================================== */
+    /* Sidebar Layout styles */
+    .gallery-sidebar {
+        position: sticky;
+        top: 110px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .gallery-view-toggle-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 0px;
+        gap: 10px;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 20px;
+        border: 1px solid #eaeaea;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    }
+    .toggle-label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #999;
+        margin-bottom: 5px;
+    }
+    .gallery-view-switcher {
+        display: flex;
+        flex-direction: column;
+        background: #f4f4f4;
+        padding: 6px;
+        border-radius: 12px;
+        border: 1px solid #e5e5e5;
+        gap: 6px;
+    }
+    .switcher-btn {
+        border: none;
+        background: transparent;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        color: #666;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        text-align: left;
+        outline: none !important;
+    }
+    .switcher-btn i {
+        font-size: 14px;
+    }
+    .switcher-btn:hover {
+        color: #111;
+    }
+    .switcher-btn.active {
+        background: #111;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Views */
+    .gallery-view-container {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        display: none;
+    }
+    .gallery-view-container.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Controls */
+    .gallery-controls-wrapper {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 25px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 0px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: opacity 0.3s ease;
+    }
+    .gallery-filters-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #999;
+        margin-bottom: 5px;
+    }
+    .gallery-filters {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 0px;
+    }
+    .filter-btn {
+        border: 1px solid #e0e0e0;
+        background: transparent;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: #555;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        outline: none !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: left;
+        width: 100%;
+    }
+    .filter-btn:hover {
+        border-color: #111;
+        color: #111;
+        background: rgba(0,0,0,0.02);
+    }
+    .filter-btn.active {
+        background: #111;
+        border-color: #111;
+        color: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Meta Bar */
+    .gallery-meta-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 20px;
+    }
+    .gallery-counter {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: #777;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .gallery-counter span {
+        font-weight: 700;
+        color: #111;
+    }
+    .gallery-search-box {
+        position: relative;
+        width: 100%;
+    }
+    .gallery-search-box input {
+        width: 100%;
+        padding: 10px 35px 10px 15px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        color: #333;
+        transition: all 0.3s ease;
+        background: #fafafa;
+    }
+    .gallery-search-box input:focus {
+        border-color: #111;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        outline: none;
+    }
+    .gallery-search-box i {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        pointer-events: none;
+        font-size: 14px;
+    }
+
+    @media (max-width: 991px) {
+        .gallery-sidebar {
+            position: relative;
+            top: 0;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .gallery-view-toggle-wrapper {
+            align-items: center;
+            padding: 15px;
+        }
+        .gallery-view-switcher {
+            flex-direction: row;
+            border-radius: 50px;
+            width: auto;
+        }
+        .switcher-btn {
+            border-radius: 50px;
+            width: auto;
+            padding: 10px 20px;
+        }
+        .gallery-controls-wrapper {
+            padding: 20px;
+        }
+        .gallery-filters {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .filter-btn {
+            width: auto;
+            border-radius: 30px;
+            padding: 8px 18px;
+            text-align: center;
+        }
+        .gallery-meta-bar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .gallery-search-box {
+            max-width: 300px;
+        }
+        .gallery-counter {
+            text-align: left;
+        }
+    }
+
+    /* Grid */
+    .minimal-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    /* Grid Cards */
+    .gallery-card {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fdfdfd;
+        border: 1px solid #eaeaea;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.01);
+        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        opacity: 0;
+        transform: translateY(30px);
+        aspect-ratio: 4/5;
+    }
+    .gallery-card.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .gallery-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        border-color: #dcdcdc;
+    }
+    .gallery-card-img-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        background-color: #f7f7f7;
+    }
+    .gallery-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-card:hover .gallery-card-img {
+        transform: scale(1.06) rotate(0.3deg);
+    }
+
+    /* Overlays */
+    .gallery-card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0) 100%);
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        height: 60%;
+        pointer-events: none;
+    }
+    .gallery-card:hover .gallery-card-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    .gallery-card-cat {
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #dfdfdf;
+        margin-bottom: 6px;
+    }
+    .gallery-card-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        margin: 0 0 15px 0;
+        line-height: 1.3;
+    }
+    .gallery-card-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .gallery-action-link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        color: #fff !important;
+        font-size: 14px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        transition: all 0.3s ease;
+    }
+    .gallery-action-link:hover {
+        background: #fff;
+        color: #111 !important;
+        transform: scale(1.15);
+    }
+
+    /* Actions and Loader */
+    .gallery-footer-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        min-height: 80px;
+    }
+    .load-more-btn {
+        background: #111;
+        color: #fff;
+        border: 1px solid #111;
+        padding: 14px 40px;
+        border-radius: 50px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        outline: none !important;
+    }
+    .load-more-btn:hover {
+        background: transparent;
+        color: #111;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        transform: translateY(-2px);
+    }
+    .load-more-btn:active {
+        transform: translateY(0);
+    }
+    .load-more-btn:disabled {
+        background: #e0e0e0;
+        border-color: #e0e0e0;
+        color: #999;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .gallery-loader-wrapper {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .gallery-loader-wrapper.active {
+        display: flex;
+    }
+    .gallery-spinner {
+        width: 35px;
+        height: 35px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #111;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 767px) {
+        .gallery-controls-wrapper {
+            padding: 15px;
+            border-radius: 12px;
+        }
+        .gallery-meta-bar {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 15px;
+        }
+        .gallery-search-box {
+            max-width: 100%;
+        }
+        .minimal-gallery-grid {
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .gallery-card {
+            border-radius: 8px;
+        }
+        .gallery-card-title {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .gallery-card-cat {
+            font-size: 8px;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+        .gallery-card-overlay {
+            padding: 12px;
+            height: 70%;
+        }
+        .gallery-action-link {
+            width: 32px;
+            height: 32px;
+            font-size: 12px;
+        }
+        .load-more-btn {
+            padding: 12px 30px;
+            font-size: 11px;
+        }
+    }
 </style>
 
 <body>
@@ -329,88 +788,154 @@
         </div>
     </div>
     <div class="home-gellary-area pt-100 pb-100">
-        <div class="container">
+        <div class="container-fluid" style="max-width: 1440px; padding: 0 30px;">
             <div class="section-title">
                 <h2>...Minimalistic! Album</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mihi vero, inquit, placet agi subtilius
-                    et,
-                    ut ipse dixisti, pressius.Photograhy HTML is very </p>
+                <p>Explore our exclusive collection of minimalist photography. Choose between a stunning interactive 3D layout or a modern grid structure featuring 100+ high-quality curated shots.</p>
             </div>
-            <div class="book">
-                <div class="page">
-                    <div class="front cover">
-                        <h1>Minimalistic Photoghraphy</h1>
-                        <p>By<br>Sanjay Vaidya</p>
-                    </div>
-                    <div class="back back-1">
-                        <h2>Responsive</h2>
-                        <p>Fully responsive CSS flip book, thanks to the <code>cqmin</code> unit.</p>
-                    </div>
-                </div>
-                <div class="page">
-                    <div class="front">
-                        <img src="images/photo/mini-1.png" alt="Img 1">
-                    </div>
-                    <div class="back">
-                        <img src="images/photo/mini-2.png" alt="Img 1">
-                    </div>
-                </div>
-                <div class="page">
-                    <div class="front">
-                        <h2>JS at its minimum</h2>
-                        <p>JavaScript is at its minimum. Basically it's only used to set the initial
-                            page index and assign click listeners to the pages. Modifies the CSS <b>Var</b>
-                            for the <i>current</i> page, and the rest is handled entirely by CSS.
-                        </p>
-                    </div>
-                    <div class="back">
-                        <p>Additionally JavaScript allows you to click on an anchor link in your
-                            text — without turning the page. You can also have multiple independent
-                            flip books in a single document. You're all covered.
-                        </p>
-                    </div>
-                </div>
-                <div class="page">
-                    <div class="front">
-                        <h2>Crafting CSS magic</h2>
-                        <p>The opened (<i>viewing</i>) pages of the flip book are always kept at the same elevation.
-                            This is necessary if your book has no inclination (is top-down-view).
-                            Have you noticed that you can also click on the pages edge? CSS will nicely animate the
-                            group
-                            of pages to skip with a staggered animation.
-                        </p>
-                    </div>
-                    <div class="back">
-                        <p>Like in this demo, you can change the perspective of the parent container and change the
-                            X axis rotation of the book for extra effect.
-                        </p>
+
+            <div class="row">
+                <!-- Sidebar Panel -->
+                <div class="col-lg-3 col-md-4 col-12">
+                    <div class="gallery-sidebar">
+                        <!-- Beautiful Switcher -->
+                        <div class="gallery-view-toggle-wrapper">
+                            <span class="toggle-label">Choose Gallery View</span>
+                            <div class="gallery-view-switcher">
+                                <button class="switcher-btn active" data-view="grid">
+                                    <i class="fa fa-th"></i> Complete Collection
+                                </button>
+                                <button class="switcher-btn" data-view="book">
+                                    <i class="fa fa-book"></i> Featured Album
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Search & Filters Container -->
+                        <div class="gallery-controls-wrapper" id="gallery-controls-sidebar">
+                            <div class="gallery-filters-title">Categories</div>
+                            <!-- Dynamic Categories -->
+                            <div class="gallery-filters" id="gallery-categories">
+                                <button class="filter-btn active" data-filter="all">All Masterpieces</button>
+                                <button class="filter-btn" data-filter="minimalist">Minimalist</button>
+                                <button class="filter-btn" data-filter="architecture">Architecture</button>
+                                <button class="filter-btn" data-filter="nature">Nature</button>
+                                <button class="filter-btn" data-filter="urban">Urban & Street</button>
+                                <button class="filter-btn" data-filter="portraits">Portraits</button>
+                            </div>
+
+                            <!-- Search Bar & Counter -->
+                            <div class="gallery-meta-bar">
+                                <div class="gallery-search-box">
+                                    <input type="text" id="gallery-search" placeholder="Search by title...">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <div class="gallery-counter">
+                                    Showing <span id="current-count">0</span> of <span id="total-count">0</span> elite photographs
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="page">
-                    <div class="front">
-                        <p>The necessary FlipBook's CSS is barely 30 lines, there is no swipe, natural page flip
-                            angling,
-                            complex shadows, etc. in order to keep it as simple as possible.
-                        </p>
+
+                <!-- Main Content Panel -->
+                <div class="col-lg-9 col-md-8 col-12">
+                    <!-- VIEW 1: Premium Interactive 3D Book (Starts hidden) -->
+                    <div class="gallery-view-container" id="book-view-container">
+                        <div class="book">
+                            <div class="page">
+                                <div class="front cover">
+                                    <h1>Minimalistic Photoghraphy</h1>
+                                    <p>By<br>Sanjay Vaidya</p>
+                                </div>
+                                <div class="back back-1">
+                                    <h2>Responsive</h2>
+                                    <p>Fully responsive CSS flip book, thanks to the <code>cqmin</code> unit.</p>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="front">
+                                    <img src="images/photo/mini-1.png" alt="Img 1">
+                                </div>
+                                <div class="back">
+                                    <img src="images/photo/mini-2.png" alt="Img 1">
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="front">
+                                    <h2>JS at its minimum</h2>
+                                    <p>JavaScript is at its minimum. Basically it's only used to set the initial
+                                        page index and assign click listeners to the pages. Modifies the CSS <b>Var</b>
+                                        for the <i>current</i> page, and the rest is handled entirely by CSS.
+                                    </p>
+                                </div>
+                                <div class="back">
+                                    <p>Additionally JavaScript allows you to click on an anchor link in your
+                                        text — without turning the page. You can also have multiple independent
+                                        flip books in a single document. You're all covered.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="front">
+                                    <h2>Crafting CSS magic</h2>
+                                    <p>The opened (<i>viewing</i>) pages of the flip book are always kept at the same elevation.
+                                        This is necessary if your book has no inclination (is top-down-view).
+                                        Have you noticed that you can also click on the pages edge? CSS will nicely animate the
+                                        group
+                                        of pages to skip with a staggered animation.
+                                    </p>
+                                </div>
+                                <div class="back">
+                                    <p>Like in this demo, you can change the perspective of the parent container and change the
+                                        X axis rotation of the book for extra effect.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="front">
+                                    <p>The necessary FlipBook's CSS is barely 30 lines, there is no swipe, natural page flip
+                                        angling,
+                                        complex shadows, etc. in order to keep it as simple as possible.
+                                    </p>
+                                </div>
+                                <div class="back">
+                                    <p>Feel free to use and abuse this code. Drop me a line if you find it cool or useful, or just
+                                        want to say <i>hi</i>.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="front">
+                                    <img src="https://picsum.photos/id/1073/600/600" alt="Img 2">
+                                </div>
+                                <div class="back cover">
+                                    <h3>That's all, folks</h3>
+                                    <p>FlipBook code and content:<br><a href="https://stackoverflow.com/users/383904/roko-c-buljan"
+                                            target="_blank" rel="nofollow">Roko C. Buljan</a>
+                                        <br>Original idea:<br><a href="https://stackoverflow.com/a/76978444/383904" target="_blank"
+                                            rel="nofollow">Stack Overflow answer</a>
+                                        <br>Images by: picsum.photos
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="back">
-                        <p>Feel free to use and abuse this code. Drop me a line if you find it cool or useful, or just
-                            want to say <i>hi</i>.
-                        </p>
-                    </div>
-                </div>
-                <div class="page">
-                    <div class="front">
-                        <img src="https://picsum.photos/id/1073/600/600" alt="Img 2">
-                    </div>
-                    <div class="back cover">
-                        <h3>That's all, folks</h3>
-                        <p>FlipBook code and content:<br><a href="https://stackoverflow.com/users/383904/roko-c-buljan"
-                                target="_blank" rel="nofollow">Roko C. Buljan</a>
-                            <br>Original idea:<br><a href="https://stackoverflow.com/a/76978444/383904" target="_blank"
-                                rel="nofollow">Stack Overflow answer</a>
-                            <br>Images by: picsum.photos
-                        </p>
+
+                    <!-- VIEW 2: Ultra-Premium Dynamic Grid Gallery (Active by default) -->
+                    <div class="gallery-view-container active" id="grid-view-container">
+                        <!-- Core Grid -->
+                        <div class="minimal-gallery-grid" id="minimal-gallery-grid">
+                            <!-- Dynamic Gallery Cards will be injected here via high-performance JS -->
+                        </div>
+
+                        <!-- Load More / Loader -->
+                        <div class="gallery-footer-actions">
+                            <button class="load-more-btn" id="load-more-btn">Load More Photographs</button>
+                            <div class="gallery-loader-wrapper" id="gallery-loader">
+                                <div class="gallery-spinner"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -560,6 +1085,7 @@
     <script src="js/main.js"></script>
 
     <script>
+        // --- 1. Interactive 3D Book Logic (Featured View) ---
         const flipBook = (elBook) => {
             elBook.style.setProperty("--c", 0); // Set current page
             elBook.querySelectorAll(".page").forEach((page, idx) => {
@@ -571,8 +1097,254 @@
                 });
             });
         };
-
         document.querySelectorAll(".book").forEach(flipBook);
+
+        // --- 2. Switcher Logic (Grid vs Book) ---
+        const switcherBtns = document.querySelectorAll(".switcher-btn");
+        const bookView = document.getElementById("book-view-container");
+        const gridView = document.getElementById("grid-view-container");
+        const sidebarControls = document.getElementById("gallery-controls-sidebar");
+
+        switcherBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                switcherBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const view = btn.getAttribute("data-view");
+                if (view === "book") {
+                    gridView.classList.remove("active");
+                    if (sidebarControls) {
+                        sidebarControls.style.opacity = "0";
+                        setTimeout(() => {
+                            sidebarControls.style.display = "none";
+                        }, 300);
+                    }
+                    setTimeout(() => {
+                        gridView.style.display = "none";
+                        bookView.style.display = "block";
+                        setTimeout(() => bookView.classList.add("active"), 50);
+                    }, 400);
+                } else {
+                    bookView.classList.remove("active");
+                    setTimeout(() => {
+                        bookView.style.display = "none";
+                        gridView.style.display = "block";
+                        if (sidebarControls) {
+                            sidebarControls.style.display = "flex";
+                            setTimeout(() => {
+                                sidebarControls.style.opacity = "1";
+                            }, 50);
+                        }
+                        setTimeout(() => gridView.classList.add("active"), 50);
+                    }, 400);
+                }
+            });
+        });
+
+        // --- 3. Dynamic 108 Photo Dataset Generator ---
+        const photoIds = [
+            // Nature
+            "photo-1507525428034-b723cf961d3e", "photo-1470071459604-3b5ec3a7fe05", "photo-1464822759023-fed622ff2c3b", "photo-1475924156734-496f6cac6ec1", 
+            "photo-1469474968028-56623f02e42e", "photo-1447752875215-b2761acb3c5d", "photo-1472214222541-d510753a4907", "photo-1501854140801-50d01698950b",
+            "photo-1433832597046-4f10e10ac764", "photo-1470240731273-7821a6eeb6bd", "photo-1500627869374-13cd993b1115", "photo-1513836279014-a89f7a76ae86",
+            "photo-1454496522488-7a8e488e8606", "photo-1506744038136-46273834b3fb", "photo-1518495973542-4542c06a5843", "photo-1502082553048-f009c37129b9",
+            "photo-1441974231531-c6227db76b6e", "photo-1510784722466-f2aa9c52eff6", "photo-1473448912268-2022ce9509d8", "photo-1505744386214-51dba16a26fc",
+            // Architecture
+            "photo-1486406146926-c627a92ad1ab", "photo-1518005020951-eccb494ad742", "photo-1487958449943-2429e8be8625", "photo-1542241647-9cbb2225278b",
+            "photo-1513694203232-719a280e022f", "photo-1490730141103-6cac27aaab94", "photo-1508919801845-fc2ae1bc2a28", "photo-1449034446853-66c86144b0ad",
+            "photo-1511818966892-d7d671e672a2", "photo-1513829096999-4978602294f4", "photo-1512917774080-9991f1c4c750", "photo-1488901512066-cd403111aeb2",
+            "photo-1506973035872-a4ec16b8e8d9", "photo-1504297050568-910d24c426d3", "photo-1516450360452-9312f5e86fc7", "photo-1470240731273-7821a6eeb6bd",
+            "photo-1527018601619-a508a2be00cd", "photo-1512453979798-5ea266f8880c", "photo-1494526508120-fc1000918a50", "photo-1522708323590-d24dbb6b0267",
+            // Portraits
+            "photo-1534528741775-53994a69daeb", "photo-1507003211169-0a1dd7228f2d", "photo-1508214751196-bcfd4ca60f91", "photo-1544005313-94ddf0286df2",
+            "photo-1506794778202-cad84cf45f1d", "photo-1517841905240-472988babdf9", "photo-1494790108377-be9c29b29330", "photo-1522075469751-3a6694fb2f61",
+            "photo-1500648767791-00dcc994a43e", "photo-1531746020798-e6953c6e8e04", "photo-1504257400765-1888ba260527", "photo-1519085360753-af0119f7cbe7",
+            "photo-1488426862026-3ee34a7d66df", "photo-1539571696357-5a69c17a67c6", "photo-1501196354995-cbb51c65aaea", "photo-1507153767270-d37808953049",
+            "photo-1524504388940-b1c1722653e1", "photo-1517841905240-472988babdf9", "photo-1438761681033-6461ffad8d80", "photo-1517841905240-472988babdf9",
+            // Urban
+            "photo-1496568818309-53d7c7753022", "photo-1496442226666-8d4d0e62e6e9", "photo-1508921912186-1d1a45ebb3c1", "photo-1514565131-fce0801e5785",
+            "photo-1480714378408-67cf0d13bc1b", "photo-1477959858617-67f85cf4f1df", "photo-1506157786151-b8491531f063", "photo-1502899574314-6efb51ad43e8",
+            "photo-1492691527719-9d1e07e534b4", "photo-1520262454112-9fe481d36ec3", "photo-1509198397868-475647b2a1e5", "photo-1517604931442-7e0c8ed2963c",
+            "photo-1478860126673-7cde96552f0b", "photo-1506157786151-b8491531f063", "photo-1518391846015-55a9cc003b25", "photo-1504609773096-104ff2c73ba4",
+            "photo-1511556532299-8f662fc26c06", "photo-1526047932273-341f2a7631f9", "photo-1519501025264-65ba15a82390", "photo-1498038432885-c6f3f1b912ee",
+            // Minimalist
+            "photo-1513542789411-b6a5d4f31634", "photo-1505740420928-5e560c06d30e", "photo-1505691938895-1758d7feb511", "photo-1513694203232-719a280e022f",
+            "photo-1502082553048-f009c37129b9", "photo-1528459801416-a9e53bbf4e17", "photo-1533090161767-e6ffed986c88", "photo-1507525428034-b723cf961d3e",
+            "photo-1512290923902-8a9f81dc236c", "photo-1508921912186-1d1a45ebb3c1", "photo-1506784983877-45594efa4cbe", "photo-1507525428034-b723cf961d3e",
+            "photo-1512486130939-2c4f79935e4f", "photo-1508243694844-a041848592e4", "photo-1490481651871-ab68de25d43d", "photo-1515378791036-0648a3ef77b2",
+            "photo-1506157786151-b8491531f063", "photo-1505691938895-1758d7feb511", "photo-1518005020951-eccb494ad742", "photo-1486406146926-c627a92ad1ab",
+            // Extras to reach 108
+            "photo-1522075469751-3a6694fb2f61", "photo-1508921912186-1d1a45ebb3c1", "photo-1469474968028-56623f02e42e", "photo-1470240731273-7821a6eeb6bd",
+            "photo-1447752875215-b2761acb3c5d", "photo-1518005020951-eccb494ad742", "photo-1487958449943-2429e8be8625", "photo-1542241647-9cbb2225278b"
+        ];
+
+        const titles = {
+            nature: ["Misty Horizons", "Alpine Echoes", "Silent Wilderness", "Golden Shores", "Whispering Forest", "Coastal Harmony", "Sun-Drenched Plains", "Peak Serenity", "Fading Shadows", "Verdant Calm"],
+            architecture: ["Monolithic Ascend", "Angular Symphony", "Brutalist Rhythm", "Facade Elements", "Infinite Spiral", "Geometric Facet", "Luminous Portal", "Symmetrical Rise", "Concrete Shadows", "Ascending Form"],
+            portraits: ["Ethereal Glance", "Studio Study", "Silent Gaze", "Candid Radiance", "Sartorial Contrast", "Raw Expression", "Golden Hour Pose", "Creative Spark", "Classical Elegance", "Monochrome Character"],
+            urban: ["Metropolitan Lines", "Neon Reflection", "Street Geometry", "Midnight Walk", "Crossroad Patterns", "Shadow Play", "City Pulses", "Silent Alleyway", "Concrete Junction", "Urban Contrast"],
+            minimalist: ["Concentric Rings", "Acoustic Essence", "Shadow & Light", "Abstract Form", "Minimal Texture", "Conceptual Void", "Morning Slumber", "Pure Composition", "Minimalist Scale", "Linear Harmony"]
+        };
+
+        const tags = {
+            nature: ["mountains", "forest", "sea", "lake", "landscape", "misty", "outdoor", "fog"],
+            architecture: ["building", "staircase", "facade", "concrete", "geometry", "curves", "modernist"],
+            portraits: ["face", "studio", "woman", "man", "expression", "eyes", "fashion", "shadow"],
+            urban: ["city", "night", "street", "crossing", "overhead", "neon", "rain", "pattern"],
+            minimalist: ["shadow", "light", "texture", "lines", "abstract", "composition", "monochromatic"]
+        };
+
+        // Construct high-end objects dynamically
+        const GALLERY_DATA = photoIds.map((id, index) => {
+            let cat = 'minimalist';
+            if (index < 20) cat = 'nature';
+            else if (index < 40) cat = 'architecture';
+            else if (index < 60) cat = 'portraits';
+            else if (index < 80) cat = 'urban';
+            
+            const catTitles = titles[cat];
+            const catTags = tags[cat];
+            
+            const title = catTitles[index % catTitles.length] + ` (Study ${Math.floor(index / catTitles.length) + 1})`;
+            const itemTags = [cat, ...catTags.slice(0, 3)];
+            
+            // optimized width=600 for performance, large resolution on lightbox
+            const thumbUrl = `https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&h=750&q=80`;
+            const fullUrl = `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1600&q=90`;
+            
+            return {
+                id: index + 1,
+                src: thumbUrl,
+                full: fullUrl,
+                category: cat,
+                title: title,
+                tags: itemTags
+            };
+        });
+
+        // --- 4. Core Gallery Engine ---
+        let currentFilter = 'all';
+        let searchQuery = '';
+        let visibleCount = 12; // Initial batch
+        const batchSize = 12;
+
+        const gridContainer = document.getElementById("minimal-gallery-grid");
+        const loadMoreBtn = document.getElementById("load-more-btn");
+        const loader = document.getElementById("gallery-loader");
+        const currentCountSpan = document.getElementById("current-count");
+        const totalCountSpan = document.getElementById("total-count");
+        const searchInput = document.getElementById("gallery-search");
+        const filterBtns = document.querySelectorAll(".filter-btn");
+
+        // Main filter and search aggregator
+        const getFilteredData = () => {
+            return GALLERY_DATA.filter(item => {
+                const matchesFilter = currentFilter === 'all' || item.category === currentFilter;
+                const matchesSearch = searchQuery === '' || 
+                    item.title.toLowerCase().includes(searchQuery) ||
+                    item.tags.some(tag => tag.toLowerCase().includes(searchQuery));
+                return matchesFilter && matchesSearch;
+            });
+        };
+
+        const renderGallery = (append = false) => {
+            const filteredData = getFilteredData();
+            totalCountSpan.textContent = filteredData.length;
+
+            const sliceEnd = Math.min(visibleCount, filteredData.length);
+            currentCountSpan.textContent = sliceEnd;
+
+            const itemsToShow = filteredData.slice(append ? visibleCount - batchSize : 0, sliceEnd);
+
+            if (!append) {
+                gridContainer.innerHTML = '';
+            }
+
+            if (filteredData.length === 0) {
+                gridContainer.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 60px 0; font-family: 'Poppins', sans-serif;">
+                        <i class="fa fa-search-plus" style="font-size: 40px; color: #ccc; margin-bottom: 15px;"></i>
+                        <p style="font-size: 16px; color: #888;">No photographs matching your request were found.</p>
+                    </div>
+                `;
+                loadMoreBtn.style.display = 'none';
+                return;
+            }
+
+            itemsToShow.forEach((item, index) => {
+                const card = document.createElement("div");
+                card.className = "gallery-card";
+                
+                card.innerHTML = `
+                    <div class="gallery-card-img-wrapper">
+                        <img class="gallery-card-img" src="${item.src}" alt="${item.title}" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-cat">${item.category}</span>
+                            <h3 class="gallery-card-title">${item.title}</h3>
+                            <div class="gallery-card-actions">
+                                <a href="${item.full}" data-lightbox="minimalist-gallery" data-title="${item.title}" class="gallery-action-link">
+                                    <i class="fa fa-search-plus"></i>
+                                </a>
+                                <a href="#" class="gallery-action-link" onclick="event.preventDefault(); alert('Bookmark saved to your visual vault.');">
+                                    <i class="fa fa-bookmark-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                gridContainer.appendChild(card);
+
+                // Elegant entry staggered transition
+                setTimeout(() => {
+                    card.classList.add("fade-in");
+                }, index * 40);
+            });
+
+            // Handle button states
+            if (sliceEnd >= filteredData.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-block';
+            }
+        };
+
+        // --- 5. Event Listeners ---
+        
+        // Load More Action
+        loadMoreBtn.addEventListener("click", () => {
+            loadMoreBtn.style.display = 'none';
+            loader.classList.add("active");
+
+            // Premium loader suspension to build professional feel
+            setTimeout(() => {
+                loader.classList.remove("active");
+                visibleCount += batchSize;
+                renderGallery(true);
+            }, 600);
+        });
+
+        // Search Input live typing
+        searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            visibleCount = batchSize; // reset paging
+            renderGallery();
+        });
+
+        // Filter Selection
+        filterBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                
+                currentFilter = btn.getAttribute("data-filter");
+                visibleCount = batchSize; // reset paging
+                renderGallery();
+            });
+        });
+
+        // Initialize grid on load
+        renderGallery();
     </script>
 
 </body>

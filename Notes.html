@@ -43,7 +43,8 @@
         /* --- STICKY NOTE / POLAROID UI --- */
         .sticky-note {
             background: #fdfdfc;
-            padding: 15px 15px 40px 15px; /* Thicker bottom for polaroid look */
+            padding: 15px 15px 40px 15px;
+            /* Thicker bottom for polaroid look */
             border-radius: 4px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
             position: relative;
@@ -54,10 +55,18 @@
         }
 
         /* Messy organic rotations */
-        .sticky-note.rotate-1 { transform: rotate(-3deg); }
-        .sticky-note.rotate-2 { transform: rotate(4deg); }
-        .sticky-note.rotate-3 { transform: rotate(-2deg); }
-        
+        .sticky-note.rotate-1 {
+            transform: rotate(-3deg);
+        }
+
+        .sticky-note.rotate-2 {
+            transform: rotate(4deg);
+        }
+
+        .sticky-note.rotate-3 {
+            transform: rotate(-2deg);
+        }
+
         /* Realistic Scotch Tape */
         .sticky-note::before {
             content: "";
@@ -68,16 +77,14 @@
             width: 100px;
             height: 30px;
             background: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(2px);
             z-index: 5;
-            background-image: linear-gradient(
-              to right,
-              rgba(255, 255, 255, 0.4) 0%,
-              rgba(255, 255, 255, 0.1) 50%,
-              rgba(255, 255, 255, 0.4) 100%
-            );
+            background-image: linear-gradient(to right,
+                    rgba(255, 255, 255, 0.4) 0%,
+                    rgba(255, 255, 255, 0.1) 50%,
+                    rgba(255, 255, 255, 0.4) 100%);
         }
 
         /* Lift up on hover */
@@ -88,12 +95,14 @@
         }
 
         /* Fix inner image border radius */
-        .sticky-note .image, .sticky-note .image img {
+        .sticky-note .image,
+        .sticky-note .image img {
             border-radius: 2px !important;
         }
 
         /* Handwritten font for title */
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
         .notes-custom-title {
             font-family: 'Caveat', cursive;
             font-size: 4rem !important;
@@ -121,8 +130,9 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="header-top-left">
                             <ul>
-                                <li><i class="fa fa-envelope-o"></i><a
-                                        href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></li>
+                                <li><i class="fa fa-envelope-o"></i>
+                                    <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -155,8 +165,10 @@
                         <div class="main-menu d-flex justify-content-center" style="float: right;">
                             <nav class="d-flex justify-content-center align-items-center" style="width: 100%;">
                                 <ul>
-                                    <li><a href="about-me.html"><i class="fa fa-camera-retro" style="margin-right: 7px;"></i>Behind The Shutter</a></li>
-                                    <li><a href="#"><i class="fa fa-eye" style="margin-right: 7px;"></i>Through The Lens<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="about-me.html"><i class="fa fa-camera-retro"
+                                                style="margin-right: 7px;"></i>Behind The Shutter</a></li>
+                                    <li><a href="#"><i class="fa fa-eye" style="margin-right: 7px;"></i>Through The
+                                            Lens<i class="fa fa-angle-down"></i></a>
                                         <ul>
                                             <li><a href="Travel.html">Travel</a></li>
                                             <li><a href="Glamour.html">Glamour</a></li>
@@ -166,7 +178,8 @@
                                             <li><a href="#">Gujarati Literature</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-book" style="margin-right: 7px;"></i>Lens On Paper<i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#"><i class="fa fa-book" style="margin-right: 7px;"></i>Lens On Paper<i
+                                                class="fa fa-angle-down"></i></a>
                                         <ul>
                                             <li><a href="Travel.html">Travel</a></li>
                                             <li><a href="Glamour.html">Glamour</a></li>
@@ -176,8 +189,10 @@
                                             <li><a href="#">Gujarati Literature</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="Interview.html"><i class="fa fa-comments" style="margin-right: 7px;"></i>Interviews</a></li>
-                                    <li><a href="contact.html"><i class="fa fa-envelope-o" style="margin-right: 7px;"></i>Contact Us</a></li>
+                                    <li><a href="Interview.html"><i class="fa fa-comments"
+                                                style="margin-right: 7px;"></i>Interviews</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-envelope-o"
+                                                style="margin-right: 7px;"></i>Contact Us</a></li>
                                 </ul>
                                 <div class="btnnn ms-auto justify-content-space-between">
                                     <a href="Notes.html" style="color: #fff;"><button class="custom-btn btn-11">My Self
@@ -219,8 +234,10 @@
                                         </ul>
                                     </li>
                                     <li><a href="blog.html">Blog </a></li>
-                                    <li><a href="Interview.html"><i class="fa fa-comments" style="margin-right: 7px;"></i>Interviews</a></li>
-                                    <li><a href="contact.html"><i class="fa fa-envelope-o" style="margin-right: 7px;"></i>Contact Us</a></li>
+                                    <li><a href="Interview.html"><i class="fa fa-comments"
+                                                style="margin-right: 7px;"></i>Interviews</a></li>
+                                    <li><a href="contact.html"><i class="fa fa-envelope-o"
+                                                style="margin-right: 7px;"></i>Contact Us</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -369,8 +386,10 @@
                             <nav>
                                 <ul>
                                     <li><i class="fa fa-paper-plane-o"></i> 44 New Design Street, rne 00 USA</li>
-                                    <li><i class="fa fa-phone"></i> <a href="tel:+985-2356-14566">+985-2356-14566</a></li>
-                                    <li><i class="fa fa-envelope-o"></i><a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></li>
+                                    <li><i class="fa fa-phone"></i> <a href="tel:+985-2356-14566">+985-2356-14566</a>
+                                    </li>
+                                    <li><i class="fa fa-envelope-o"></i><a
+                                            href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></li>
                                     <li><i class="fa fa-fax"></i> Fax: (123) 4589761</li>
                                 </ul>
                             </nav>

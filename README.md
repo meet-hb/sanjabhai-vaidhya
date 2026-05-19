@@ -4,7 +4,6 @@
 ---
 
 ## 🌐 Live Pages
-
 | Page | File | Description |
 |------|------|-------------|
 | **Home** | `index.html` | Main landing page with hero slider, about section, gallery highlights, testimonials (3D flipbook), and more |
@@ -21,7 +20,6 @@
 | **Contact** | `contact.html` | Contact form and location details |
 
 ---
-
 ## 🗂️ Project Structure
 
 ```

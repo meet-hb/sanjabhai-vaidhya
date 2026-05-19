@@ -1,7 +1,6 @@
 # 📸 Sanjay Vaidya — Official Portfolio Website
 
 > A premium, fully responsive personal portfolio website for **Sanjay Vaidya** — celebrated Gujarati photographer, visual storyteller, and educator — featuring his four-decade journey capturing iconic personalities, landscapes, and the soul of Gujarati literary culture.
-
 ---
 
 ## 🌐 Live Pages
